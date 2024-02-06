@@ -9,24 +9,21 @@ namespace game
 	class Intro
 	{
 	public:
-		Intro();
+		Intro(sf::RenderWindow& window);
 		void update();
 		void draw(sf::RenderWindow& window);
 		~Intro();
 
 	private:
+		void centerTextOnScreen(sf::Text& text, sf::RenderWindow& window, float vert_center_offset);
 
 		// Intro members
+		sf::Clock intro_timer_;
+		float intro_elapsed_;
+
 		sf::Font intro_font_;
-		sf::Clock show_texts_timer_;
-
-		sf::Text intro_title_;
-		bool intro_title_visible_;
-		
+		sf::Text intro_title_;	
 		sf::Text intro_subtitle_;
-		bool intro_subtitle_visible_;
-
-		std::vector<sf::Text> active_texts_;
 	};
 }
 

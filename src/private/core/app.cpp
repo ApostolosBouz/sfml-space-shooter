@@ -16,12 +16,12 @@ namespace game
 {
 	App::App()
 	{
-		intro_ = std::make_unique<Intro>();
-
 		running_ = true;
 		context_settings_.antialiasingLevel = 4;
 		window_.create(sf::VideoMode(800, 600), "Space Shooter", sf::Style::Default, context_settings_);
 		window_.setFramerateLimit(120);
+		
+		intro_ = std::make_unique<Intro>(window_);
 	}
 
 	void App::start()
@@ -29,11 +29,13 @@ namespace game
 		while (running_)
 		{
 			processWindowEvents();
+			
+			// Update loop
 
 			// Render loop
 			if (window_.isOpen())
 			{
-			intro_->update();
+				intro_->update();
 				window_.clear();
 				intro_->draw(window_);
 				window_.display();
