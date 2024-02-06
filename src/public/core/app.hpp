@@ -7,6 +7,8 @@
 
 namespace game
 {
+	class Intro;
+
 	class App
 	{
 	public:
@@ -22,6 +24,8 @@ namespace game
 		void update();
 
 		bool running_;
+
+		std::unique_ptr<Intro> intro_ = nullptr;
 	};
 }
 

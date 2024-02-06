@@ -10,11 +10,14 @@
 #include <iostream>
 
 #include "core/app.hpp"
+#include "game/intro.hpp"
 
 namespace game
 {
 	App::App()
 	{
+		intro_ = std::make_unique<Intro>();
+
 		running_ = true;
 		context_settings_.antialiasingLevel = 4;
 		window_.create(sf::VideoMode(800, 600), "Space Shooter", sf::Style::Default, context_settings_);
@@ -30,8 +33,9 @@ namespace game
 			// Render loop
 			if (window_.isOpen())
 			{
+			intro_->update();
 				window_.clear();
-				// TODO: insert game drawings here
+				intro_->draw(window_);
 				window_.display();
 			}
 			else
