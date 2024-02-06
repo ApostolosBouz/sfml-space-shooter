@@ -50,8 +50,17 @@ FetchContent_MakeAvailable(SFML)
 
 # Add the source files
 set(proj_entry "${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp")
-set(proj_source_files "${CMAKE_CURRENT_SOURCE_DIR}/src/private/core/app.cpp")
-set(proj_header_files "${CMAKE_CURRENT_SOURCE_DIR}/src/public/core/app.hpp")
+
+set(proj_source_files
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/private/core/app.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/private/game/intro.cpp"
+)
+
+set(proj_header_files
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/public/core/app.hpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/public/game/intro.hpp"
+)
+
 set(proj_win32_files "${CMAKE_CURRENT_SOURCE_DIR}/src/public/platforms/win_reset.hpp")
 
 ## Executable
