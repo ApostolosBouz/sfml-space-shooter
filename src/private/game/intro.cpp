@@ -7,7 +7,7 @@ namespace game
 {
 	Intro::Intro(sf::RenderWindow& window)
 	{
-		if (!intro_font_.loadFromFile("assets/fonts/UbuntuCond.ttf"))
+		if (!intro_font_.loadFromFile("assets/fonts/Orbitron-Bold.ttf"))
 		{
 			// TODO: Handle font loading error
 		}
