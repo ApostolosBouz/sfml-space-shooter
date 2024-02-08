@@ -10,18 +10,20 @@
 #include <iostream>
 
 #include "core/app.hpp"
-#include "game/intro.hpp"
+#include "game/intro_phase.hpp"
 
 namespace game
 {
 	App::App()
 	{
+		std::cout << "Game loaded." << std::endl;
+		
 		running_ = true;
 		context_settings_.antialiasingLevel = 4;
 		window_.create(sf::VideoMode(800, 600), "Space Shooter", sf::Style::Default, context_settings_);
 		window_.setFramerateLimit(120);
 		
-		intro_ = std::make_unique<Intro>(window_);
+		intro_ = std::make_unique<IntroPhase>(window_);
 	}
 
 	void App::start()

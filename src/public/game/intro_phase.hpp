@@ -1,25 +1,22 @@
-#ifndef INTRO_HPP
-#define INTRO_HPP
+#ifndef INTRO_PHASE_HPP
+#define INTRO_PHASE_HPP
 
 #include <SFML/Graphics.hpp>
 #include <vector>
+#include "core/phase.hpp"
 
 namespace game
 {
-	class Intro
+	class IntroPhase : public Phase
 	{
 	public:
-		Intro(sf::RenderWindow& window);
-		void update();
-		void draw(sf::RenderWindow& window);
-		~Intro();
+		IntroPhase(sf::RenderWindow& window);
+		void update() override;
+		void draw(sf::RenderWindow& window) override;
+		~IntroPhase();
 
 	private:
 		void centerTextOnScreen(sf::Text& text, sf::RenderWindow& window, float vert_center_offset);
-
-		// Intro members
-		sf::Clock intro_timer_;
-		float intro_elapsed_;
 
 		sf::Font intro_font_;
 		sf::Text intro_title_;	

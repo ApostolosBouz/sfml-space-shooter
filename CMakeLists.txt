@@ -53,12 +53,18 @@ set(proj_entry "${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp")
 
 set(proj_source_files
     "${CMAKE_CURRENT_SOURCE_DIR}/src/private/core/app.cpp"
-    "${CMAKE_CURRENT_SOURCE_DIR}/src/private/game/intro.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/private/core/object.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/private/core/actor.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/private/core/phase.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/private/game/intro_phase.cpp"
 )
 
 set(proj_header_files
     "${CMAKE_CURRENT_SOURCE_DIR}/src/public/core/app.hpp"
-    "${CMAKE_CURRENT_SOURCE_DIR}/src/public/game/intro.hpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/public/core/object.hpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/public/core/actor.hpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/public/core/phase.hpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/public/game/intro_phase.hpp"
 )
 
 set(proj_win32_files "${CMAKE_CURRENT_SOURCE_DIR}/src/public/platforms/win_reset.hpp")

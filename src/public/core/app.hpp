@@ -1,5 +1,5 @@
-#ifndef GAME_HPP
-#define GAME_HPP
+#ifndef APP_HPP
+#define APP_HPP
 
 #include <SFML/Graphics.hpp>
 #include <memory>
@@ -7,7 +7,7 @@
 
 namespace game
 {
-	class Intro;
+	class IntroPhase;
 
 	class App
 	{
@@ -25,7 +25,7 @@ namespace game
 
 		bool running_;
 
-		std::unique_ptr<Intro> intro_ = nullptr;
+		std::unique_ptr<IntroPhase> intro_ = nullptr;
 	};
 }
 
