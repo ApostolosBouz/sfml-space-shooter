@@ -2,7 +2,7 @@
 # Space Shooter
 
 ## Overview
-Top-to-bottom scrolling shooter game made for fun, using the Simple and Fast Multimedia Library (SFML).
+Top-to-bottom scrolling shooter game made **for fun** and **leisure**, using the Simple and Fast Multimedia Library (SFML).
 
 ## Features
 - **Gameplay**: Use W, A, S, D to pilot your ship, and SPACE to fire.
