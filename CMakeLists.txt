@@ -56,6 +56,7 @@ set(proj_source_files
     "${CMAKE_CURRENT_SOURCE_DIR}/src/private/core/object.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/src/private/core/actor.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/src/private/core/phase.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/private/core/stage.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/src/private/game/intro_phase.cpp"
 )
 
@@ -64,6 +65,7 @@ set(proj_header_files
     "${CMAKE_CURRENT_SOURCE_DIR}/src/public/core/object.hpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/src/public/core/actor.hpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/src/public/core/phase.hpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/public/core/stage.hpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/src/public/game/intro_phase.hpp"
 )
 

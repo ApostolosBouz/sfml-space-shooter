@@ -32,9 +32,6 @@ namespace game
 		{
 			processWindowEvents();
 			
-			// Update loop
-
-			// Render loop
 			if (window_.isOpen())
 			{
 				intro_->update();
